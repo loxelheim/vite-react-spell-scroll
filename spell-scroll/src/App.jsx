@@ -7,13 +7,6 @@ function App() {
 
     <hr />
     
-    <div className="spell-add">
-      <input type="text" />
-      <button>Add Spell</button>
-    </div>
-    
-    <hr />
-
     <Scroll></Scroll>
   </>)
 }
