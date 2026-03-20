@@ -1,5 +1,8 @@
-h1 {
+html {
   font-family: var(--font);
+}
+h1 {
+  /* font-family: var(--font); */
   font-weight: bold;
   font-style: italic;
 } 

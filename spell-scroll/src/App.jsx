@@ -1,11 +1,20 @@
-import { useState } from 'react'
 import './App.css'
+import Scroll from './components/Scroll'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (<>
     <h1>Spell Scroll</h1>
+
+    <hr />
+    
+    <div className="spell-add">
+      <input type="text" />
+      <button>Add Spell</button>
+    </div>
+    
+    <hr />
+
+    <Scroll></Scroll>
   </>)
 }
 
