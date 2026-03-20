@@ -4,32 +4,36 @@ function Spell(props) {
   const [editValue, setEditValue] = useState(props.title)
   const [editMode, setEditMode] = useState(false)
 
-  if (!editMode) {
-    // NOT edit view
-    return (<li key={props.id} className='spell-item'>
+  return (
+    <li key={props.id} className={!editMode ? 'spell-item' : 'spell-item editing'}>
 
-      <h3>{props.title}</h3>
+    { !editMode ? <>
+
+      {/* is NOT Edit view */}
+      <span className="spell-title">{props.title}</span>
       
       <div className="buttons">
+        {/* toggle edit mode on */}
         <button onClick={() => setEditMode(true)}>✏️</button>
+        {/* delete spell and data to parent */}
         <button onClick={() => props.removeSpell(props.id)}>🗑️</button>
       </div>
-    </li>)
 
-  } else {
-    // Edit view
-    // input value is prefilled with the initial text
-    return (<li className='spell-item'>
-
-      <h3>
+    </> : <>
+    
+      {/* is Edit view */}
+      <span className="spell-title">
+        {/* prefill input value with initial title */}
         <input type="text" 
           onChange={event => setEditValue(event.target.value)} 
           value={editValue}/>
-      </h3>
+      </span>
       
       <div className="buttons">
+
+        {/* save edit */}
         <button onClick={() => {
-          // send updated spell to parent
+          // send data to parent
           props.updateSpell({
             id: props.id,
             title: editValue
@@ -37,6 +41,8 @@ function Spell(props) {
           // toggle edit mode off
           setEditMode(false)
         }}>💾</button>
+        
+        {/* cancel edit */}
         <button onClick={() => {
           // reset edit value
           setEditValue(props.title)
@@ -44,8 +50,11 @@ function Spell(props) {
           setEditMode(false)
           }}>❌</button>
       </div>
-    </li>)
-  }
+
+    </> }
+    
+  </li>)
+
 }
 
 export default Spell

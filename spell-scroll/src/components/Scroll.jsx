@@ -14,7 +14,7 @@ function Scroll() {
   function addSpellToArray(){
     const newSpell = {
       id: spellArray[spellArray.length-1].id +1,
-      title: inputValue
+      title: inputValue.trim()
     }
     setSpellArray([...spellArray, newSpell])
     setInputValue("")

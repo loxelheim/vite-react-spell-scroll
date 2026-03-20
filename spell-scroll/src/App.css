@@ -10,12 +10,43 @@ h1 {
 .scroll {
 }
 
+.spell-list {
+  margin: 0;
+  padding: 0;
+}
+
 .spell-list li {
+  padding: 0.25rem;
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+  gap: 0.5rem;
+}
+
+.spell-list li.editing {
+  background-color: aqua;
+}
+
+.spell-list li .spell-title {
+  min-height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+.spell-list li .spell-title > input {
+  background-color: transparent;
+  font-family: var(--font);
+  font-size: 1em;
+  padding-left: 0;
+  border: 0;
+  border-bottom: 0.1em dashed;
+  width: 100%;
 }
 
 .spell-list li .buttons {
+  flex-shrink: 0;
 }
