@@ -49,8 +49,13 @@ function Scroll() {
     <hr />
 
     <div className="spell-add">
-      <input type="text" onChange={event => setInputValue(event.target.value)} value={inputValue}/>
-      <button onClick={addSpellToArray}>Add Spell</button>
+      <input 
+        type="text" 
+        onChange={event => setInputValue(event.target.value)} 
+        value={inputValue}
+        placeholder='New Spell here!'
+      />
+      <button onClick={addSpellToArray}>➕</button>
     </div>
     
     <hr />

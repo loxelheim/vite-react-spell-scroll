@@ -40,6 +40,22 @@ section.background {
   margin: 0.5em 0;
 }
 
+.scroll hr {
+  width: 100%;
+}
+
+.spell-add {
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: cyan;
+  box-shadow: 0 0 10px 0 cyan;
+  border-radius: 0.2rem;
+}
+
 .spell-list {
   margin: 0;
   padding: 0;
@@ -71,6 +87,7 @@ section.background {
   width: 100%;
 }
 
+.scroll .spell-add input,
 .spell-list li .spell-title > input {
   transition: all 0.5s ease-in-out;
   text-shadow: 0.1em 0.1em 5px orangered;
@@ -83,6 +100,10 @@ section.background {
   border-bottom: 0.1em dashed;
   width: 100%;
 }
+.scroll .spell-add input {
+  color: darkblue;
+}
+
 
 .spell-list li.editing .spell-title > input {
   color: inherit;
