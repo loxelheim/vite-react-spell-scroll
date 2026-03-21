@@ -3,10 +3,7 @@ import Scroll from './components/Scroll'
 
 function App() {
   return (<>
-    <h1>Spell Scroll</h1>
-
-    <hr />
-    
+    <section className="background"></section>
     <Scroll></Scroll>
   </>)
 }

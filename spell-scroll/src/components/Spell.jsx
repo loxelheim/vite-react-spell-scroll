@@ -10,7 +10,9 @@ function Spell(props) {
     { !editMode ? <>
 
       {/* is NOT Edit view */}
-      <span className="spell-title">{props.title}</span>
+      <span className="spell-title">
+        <input type="text" disabled value={props.title}/>
+      </span>
       
       <div className="buttons">
         {/* toggle edit mode on */}
@@ -24,7 +26,7 @@ function Spell(props) {
       {/* is Edit view */}
       <span className="spell-title">
         {/* prefill input value with initial title */}
-        <input type="text" 
+        <input type="text"
           onChange={event => setEditValue(event.target.value)} 
           value={editValue}/>
       </span>

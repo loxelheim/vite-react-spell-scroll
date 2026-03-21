@@ -1,22 +1,53 @@
-html {
+html, body {
+  margin: 0;
   font-family: var(--font);
 }
-h1 {
-  /* font-family: var(--font); */
-  font-weight: bold;
-  font-style: italic;
+
+section.background {
+  background-image: url(img/bg-generated-2.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .scroll {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 450px;
+  max-height: 90vh;
+  margin: 5vh auto;
+  padding: 0.5rem;
+
+  border: solid 5px cyan;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 0 cyan, inset 0 0 10px 0 cyan;
+  background-color: rgb(97 31 188 / 57%);
+
+  display: flex;
+  flex-flow: column;
+}
+
+.scroll h1 {
+  text-align: center;
+  text-shadow: 0.1em 0.1em 5px orangered;
+  color: cyan;
+  font-size: 2.5em;
+  margin: 0.5em 0;
 }
 
 .spell-list {
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
 .spell-list li {
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -26,7 +57,10 @@ h1 {
 }
 
 .spell-list li.editing {
-  background-color: aqua;
+  background-color: cyan;
+  box-shadow: 0 0 10px 0 cyan;
+  border-radius: 0.2rem;
+  color: darkblue;
 }
 
 .spell-list li .spell-title {
@@ -38,6 +72,9 @@ h1 {
 }
 
 .spell-list li .spell-title > input {
+  transition: all 0.5s ease-in-out;
+  text-shadow: 0.1em 0.1em 5px orangered;
+  color: cyan;
   background-color: transparent;
   font-family: var(--font);
   font-size: 1em;
@@ -45,6 +82,11 @@ h1 {
   border: 0;
   border-bottom: 0.1em dashed;
   width: 100%;
+}
+
+.spell-list li.editing .spell-title > input {
+  color: inherit;
+  text-shadow: 0px 0px 0px purple, 0px 0px 0px white;
 }
 
 .spell-list li .buttons {

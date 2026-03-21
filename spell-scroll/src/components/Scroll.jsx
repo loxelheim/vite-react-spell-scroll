@@ -44,6 +44,10 @@ function Scroll() {
 
   return (<section className='scroll'>
 
+    <h1>Spell "Scroll"</h1>
+
+    <hr />
+
     <div className="spell-add">
       <input type="text" onChange={event => setInputValue(event.target.value)} value={inputValue}/>
       <button onClick={addSpellToArray}>Add Spell</button>
