@@ -103,6 +103,9 @@ section.background {
 .scroll .spell-add input {
   color: darkblue;
 }
+.scroll .spell-add input::placeholder {
+  color: darkblue;
+}
 
 
 .spell-list li.editing .spell-title > input {
