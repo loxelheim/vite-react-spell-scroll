@@ -5,7 +5,8 @@ Not sure how to make the Scroll an actuall scroll-y looking Scroll, tho ...
 
 Maybe it's like an outdated term, but the wizards of the modern age have switched to magical displays that float in the air ... or something?? Idk, we'll see where the creative juices bring us.
 
-
+1. `cd spell-scroll`
+2. `npm install`
 
 ## Knowledge bits:
 
